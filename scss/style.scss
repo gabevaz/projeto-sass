@@ -5,43 +5,51 @@ $dark-grey: #464646;
 
 .header {
     font-family: Arial, Helvetica, sans-serif;
-}
-.header__logo {
-    text-align: center;
-}
-.header__logo .header__img {
-    max-width: 350px;
-}
-.header__menu .menu__list {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid $light-grey;
-    border-bottom: 1px solid $light-grey;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 20px 0;
-}
-.header__menu .menu__list .menu__links {
-    position: relative;
-}
-.header__menu .menu__list .menu__links:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -3px;
-    margin: auto;
-    height: 15px;
-    width: 1px;
-    background-color: $light-grey;
-}
-.header__menu .menu__list .menu__links .menu__link {
-    padding: 0 25px;
-    color: $dark-grey;
-}
-.header__menu .menu__list .menu__links .menu__link:hover {
-    color: $purple;
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__img {
+        max-width: 350px;
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid $light-grey;
+            border-bottom: 1px solid $light-grey;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            padding: 20px 0;
+        }
+
+        &__links {
+            position: relative;
+
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -3px;
+                margin: auto;
+                height: 15px;
+                width: 1px;
+                background-color: $light-grey;
+            }
+        }
+        &__link {
+            padding: 0 25px;
+            color: $dark-grey;
+
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
 }
 /* Este trecho de estilo se refere 
 ao rodapé do nosso blog*/
@@ -54,11 +62,13 @@ ao rodapé do nosso blog*/
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-}
-.footer .footer__logo {
-    max-width: 100px;
-}
-.footer .footer__txt {
-    margin: auto;
-    font-size: 14px;
+
+    &__logo {
+        max-width: 100px;
+    }
+
+    &__txt {
+        margin: auto;
+        font-size: 14px;
+    }
 }
