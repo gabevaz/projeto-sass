@@ -46,7 +46,7 @@ ao rodapé do nosso blog*/
   text-align: center;
   padding: 20px 0;
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -57,6 +57,107 @@ ao rodapé do nosso blog*/
 .footer__txt {
   margin: auto;
   font-size: 14px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main__content {
+  width: 70%;
+  padding: 40px 8px;
+}
+.main__post {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main__title {
+  text-decoration: none;
+  font-size: 22px;
+  color: #464646;
+  letter-spacing: 1.5;
+}
+.main__title:hover {
+  color: #A050BE;
+}
+.main__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.main__date {
+  margin: 0 10px;
+  font-size: 12px;
+  font-style: italic;
+}
+.main__tag {
+  font-size: 14px;
+  padding: 5px 7px;
+  color: #A050BE;
+  border: 1px solid #A050BE;
+  margin: 0 10px;
+}
+.main__details {
+  border: 1px solid #eaeaeb;
+}
+.main__img {
+  width: 100%;
+}
+.main__description {
+  padding: 40px 0 25px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+.main__btn {
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1.5;
+  color: #A050BE;
+  background-color: #FABE50;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+.main__btn:hover {
+  color: #FABE50;
+  background-color: #A050BE;
+}
+.main__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eaeaeb;
+  margin-top: 30px;
+}
+.main__author {
+  width: 50%;
+  border-right: 1px solid #eaeaeb;
+}
+.main__p {
+  font-size: 14px;
+  color: #464646;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main__comments {
+  width: 50%;
+}
+.main__a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #464646;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main__a:hover {
+  color: #A050BE;
 }
 
 /*# sourceMappingURL=style.css.map */
