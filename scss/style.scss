@@ -31,6 +31,14 @@ $img-width: 45%;
     @media (min-width: 1200px) { @content; }
 }
 
+@function calculateRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin fontSize($size) {
+    font-size: calculateRem($size);
+}
+
 .header {
     font-family: Arial, Helvetica, sans-serif;
 
@@ -111,7 +119,7 @@ ao rodapé do nosso blog*/
 
     &__txt {
         margin: auto;
-        font-size: 14px;
+        @include fontSize(14px);
     }
 }
 .main {
@@ -137,7 +145,7 @@ ao rodapé do nosso blog*/
 
     &__title {
         text-decoration: none;
-        font-size: 22px;
+        @include fontSize(22px);
         color: $dark-grey;
         letter-spacing: 1.5;
         &:hover {
