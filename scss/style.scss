@@ -41,6 +41,16 @@ $img-width: 45%;
 
 @import 'header', 'footer', 'about', 'article';
 
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+    %no-margin-#{$direction} {margin-#{$direction}: 0;}
+    %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+    %double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+    %half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -76,12 +86,11 @@ $img-width: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        @extend %default-margin-top, %double-margin-bottom;
     }
 
     &__date {
-        margin: 0 10px;
+        @extend %no-margin-top, %no-margin-bottom, %default-margin-left, %default-margin-right;
         font-size: 12px;
         font-style: italic;
     }
@@ -91,7 +100,7 @@ $img-width: 45%;
         padding: 5px 7px;
         color: $purple;
         border: 1px solid $purple;
-        margin: 0 10px;
+        @extend %no-margin-top, %no-margin-bottom, %default-margin-left, %default-margin-right;
     }
 
     &__details {

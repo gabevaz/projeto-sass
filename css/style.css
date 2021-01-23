@@ -219,6 +219,30 @@ ao rodapé do nosso blog*/
   padding: 10px 20px;
 }
 
+.main__tag, .main__date {
+  margin-top: 0;
+}
+
+.main__subtitle {
+  margin-top: 10px;
+}
+
+.main__tag, .main__date {
+  margin-bottom: 0;
+}
+
+.main__subtitle {
+  margin-bottom: 20px;
+}
+
+.main__tag, .main__date {
+  margin-left: 10px;
+}
+
+.main__tag, .main__date {
+  margin-right: 10px;
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -253,11 +277,8 @@ ao rodapé do nosso blog*/
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 .main__date {
-  margin: 0 10px;
   font-size: 12px;
   font-style: italic;
 }
@@ -266,7 +287,6 @@ ao rodapé do nosso blog*/
   padding: 5px 7px;
   color: #A050BE;
   border: 1px solid #A050BE;
-  margin: 0 10px;
 }
 .main__details {
   border: 1px solid #eaeaeb;
